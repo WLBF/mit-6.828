@@ -115,11 +115,40 @@ stack:
   ...
 ```
 
-Call `bootmain ` push the return address to the stack which is `0x7c4d`.
+Call `bootmain()` push the return address to the stack which is `0x7c4d`.
 
 stack:
 
 ```
+0x7bfc: 0x00007c4d <--- bootmain() return address
+------------------
+0x7c00: 0x8ec031fa <--- init esp
+```
+
+The prologue in `bootmain()` makes a stack frame
+
+```asm
+00007d3b <bootmain>:
+{
+    7d3b:	55                   	push   %ebp
+    7d3c:	89 e5                	mov    %esp,%ebp
+    7d3e:	57                   	push   %edi
+    7d3f:	56                   	push   %esi
+    7d40:	53                   	push   %ebx
+    7d41:	83 ec 0c             	sub    $0xc,%esp
+```
+
+stack:
+
+```
+0x7bdc: 0x00007d8d <--- entry() return address
+0x7be0: 0x00000000 \
+0x7be4: 0x00000000  |-- local vars (sub    $0xc,%esp)
+0x7be8: 0x00000000 /
+0x7bec: 0x00000000 <--- old ebx
+0x7bf0: 0x00000000 <--- old esi
+0x7bf4: 0x00000000 <--- old edi
+0x7bf8: 0x00000000 <--- old ebp
 0x7bfc: 0x00007c4d <--- bootmain() return address
 ------------------
 0x7c00: 0x8ec031fa <--- init esp
@@ -185,33 +214,3 @@ stack:
 ------------------
 0x7c00: 0x8ec031fa <--- init esp
 ```
-
-
-
-### What is on the stack?
-
-```asm
-00007d3b <bootmain>:
-{
-    7d3b:	55                   	push   %ebp
-    7d3c:	89 e5                	mov    %esp,%ebp
-    7d3e:	57                   	push   %edi
-    7d3f:	56                   	push   %esi
-    7d40:	53                   	push   %ebx
-    7d41:	83 ec 0c             	sub    $0xc,%esp
-```
-
-```
-0x7bdc: 0x00007d8d <--- entry() return address
-0x7be0: 0x00000000 \
-0x7be4: 0x00000000  |-- local vars (sub    $0xc,%esp)
-0x7be8: 0x00000000 /
-0x7bec: 0x00000000 <--- old ebx
-0x7bf0: 0x00000000 <--- old esi
-0x7bf4: 0x00000000 <--- old edi
-0x7bf8: 0x00000000 <--- old ebp
-0x7bfc: 0x00007c4d <--- bootmain() return address
-------------------
-0x7c00: 0x8ec031fa <--- init esp
-```
-
