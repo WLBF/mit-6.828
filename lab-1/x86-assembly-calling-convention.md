@@ -7,6 +7,10 @@ References：
 [http://www.cs.virginia.edu/~evans/cs216/guides/x86.html](http://www.cs.virginia.edu/~evans/cs216/guides/x86.html)
 [https://en.wikibooks.org/wiki/X86_Assembly](https://en.wikibooks.org/wiki/X86_Assembly)
 
+![](x86-registers.png)
+
+![](stack-convention.png)
+
 ## Make a subrouting call
 
 1. Before calling a subrouting, save the *caller-saved* registers (`EAX, ECX, EDX`).
