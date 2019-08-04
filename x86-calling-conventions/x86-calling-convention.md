@@ -17,7 +17,7 @@ References：
 
 2. Push the parameters onto the stack.
 
-3. Use `call` instruction, places the retrun address onto stack, and branches to the subroutine code.
+3. Use `call` instruction, push  the retrun address onto stack, and branches to the subroutine code.
 
 ## Callee prologue
 
