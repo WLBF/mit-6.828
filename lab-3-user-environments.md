@@ -1,3 +1,5 @@
+# Lab 3: User Environments
+
 **Exercise 4.**
 
 **Questions**
@@ -21,3 +23,4 @@
 2. What do you think is the point of these mechanisms, particularly in light of what the `user/softint` test program does?
 
    Prevent buggy or malicious user code compromise the kernel.
+
