@@ -8,7 +8,7 @@
 
 2. How did you structure your receive implementation? In particular, what do you do if the receive queue is empty and a user environment requests the next incoming packet?
 
-   If the receive queue is empty and a user environment requests the next incoming packet, the input environment loop retry receive call until next incomming packet.
+   If the receive queue is empty and a user environment requests the next incoming packet, the input environment keep retry receive call until next incomming packet.
 
 3. What does the web page served by JOS's web server say?
 
