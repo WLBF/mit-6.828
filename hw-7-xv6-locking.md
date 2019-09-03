@@ -23,7 +23,7 @@ Function `iderw()` acquire `idelock ` in its procdure,  at the same time a `IRQ_
 
 Explain in a few sentences why the kernel didn't panic. Why do `file_table_lock` and `ide_lock` have different behavior in this respect?
 
-Function `filealloc` hold `ftable.lock` for very short times, much shorter than a timer interrupt cycle.
+Function `filealloc` hold `ftable.lock` for very short times, much shorter than a timer interrupt cycle. (not sure, always get same painc as before)
 
 
 

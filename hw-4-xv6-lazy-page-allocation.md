@@ -6,13 +6,5 @@ Page fault occurs because shell calls `malloc` system call in `runcmd` function,
 
 ## Part Two: Lazy allocation
 
-```c
-  case T_PGFLT:
-    a = rcr2();
-    a = PGROUNDDOWN(a);
-    mem = kalloc();
-    memset(mem, 0, PGSIZE);
-    mappages(myproc()->pgdir, (char*)a, PGSIZE, V2P(mem), PTE_W|PTE_U);
-    break;
-```
+[https://github.com/WLBF/xv6-public/commit/ce445cf982c57aacc9bf5a16972d5de473c19de2](https://github.com/WLBF/xv6-public/commit/ce445cf982c57aacc9bf5a16972d5de473c19de2)
 

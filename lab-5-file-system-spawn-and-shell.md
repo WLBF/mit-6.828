@@ -8,5 +8,5 @@
    
 2.  Think about what you would have to do in order to implement `exec` in user space, and be sure you understand why it is harder.
 
-    `exec` need to load image and setup frame while `exec` self is still running.
+    Program `exec` need to replace image and setup frame while itself is running.
 
