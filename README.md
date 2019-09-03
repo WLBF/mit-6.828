@@ -16,6 +16,12 @@
 
 ## Contents
 
+### References
+
+* [C pointers](https://github.com/WLBF/mit-6.828/blob/master/c-pointers.md)  
+* [x86 calling conventions](https://github.com/WLBF/mit-6.828/blob/master/x86-calling-conventions/x86-calling-convention.md)  
+
+
 ### Homeworks
 
 1. [xv6 boot](https://github.com/WLBF/mit-6.828/blob/master/hw-1-xv6-boot.md)
@@ -25,7 +31,7 @@
 5. [xv6 cpu alarm](https://github.com/WLBF/mit-6.828/blob/master/hw-5-xv6-cpu-alarm.md)
 6. [threads and locking](https://github.com/WLBF/mit-6.828/blob/master/hw-6-threads-and-locking)
 7. [xv6 locking](https://github.com/WLBF/mit-6.828/blob/master/hw-7-xv6-locking.md)
-8. [user level threads](https://github.com/WLBF/mit-6.828/blob/master/hw-8-xv6-user-level-threads.md)
+8. [xv6 user level threads](https://github.com/WLBF/mit-6.828/blob/master/hw-8-xv6-user-level-threads.md)
 9. [barriers](https://github.com/WLBF/mit-6.828/blob/master/hw-9-barriers)
 10. [xv6 big-files](https://github.com/WLBF/mit-6.828/blob/master/hw-10-xv6-big-files.md)
 11. [xv6 log](https://github.com/WLBF/mit-6.828/blob/master/hw-11-xv6-log.md)

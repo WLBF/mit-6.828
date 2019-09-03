@@ -1,4 +1,4 @@
-# Calling Convention
+# Calling Convention (AT&T Syntax)
 
 Note about x86 assembly calling convention.
 
@@ -13,7 +13,7 @@ References：
 
 ## Make a subrouting call
 
-1. Before calling a subrouting, save the *caller-saved* registers (`EAX, ECX, EDX`).
+1. Before calling a subrouting, save the *caller-saved* registers (`eax, ecx, edx`).
 
 2. Push the parameters onto the stack.
 
@@ -24,33 +24,33 @@ References：
 1. Push old base pointer value, for restore it after subroutine.
 
 ``` asm
-push ebp
-mov ebp, esp
+push %ebp
+mov  %esp, %ebp
 ```
 
 2. Allocate local variables by make space on the stack. e.g.
 
 ```asm
-sub esp, 12
+sub 12, %esp
 ```
 
-3. Save the values of the *callee-saved* register push them onto stack (`EBX, EDI, ESI`).
+3. Save the values of the *callee-saved* register push them onto stack (`ebx, edi, esi`).
 
 ## Callee body proceed
 
 ## Callee epilogue
 
-1. Leave the return value in `EAX`.
+1. Leave the return value in `eax`.
 
-2. Restore the old values of any *callee-saved* registers (`EDI, ESI, EBX`).
+2. Restore the old values of any *callee-saved* registers (`edi, esi, ebx`).
 
 3. Deallocate local variables.
 
 ```asm
-mov esp, ebp
+mov %ebp, %esp
 ```
 
-4. Restore the caller's base pointer value by poping `EBP` from the stack.
+4. Restore the caller's base pointer value by poping `ebp` from the stack.
 
 5. Return to the caller by executing a return `ret` instruction, find and reomve the *return address* from the stack.
 
@@ -58,4 +58,4 @@ mov esp, ebp
 
 1. Remove the parameters from stack.
 
-2. Restore the contents of *caller-saved* registers (`EAX, ECX, EDX`)
+2. Restore the contents of *caller-saved* registers (`eax, ecx, edx`)
