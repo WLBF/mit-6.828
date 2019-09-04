@@ -4,11 +4,6 @@
 
 [https://pdos.csail.mit.edu/6.828/2018/schedule.html](https://pdos.csail.mit.edu/6.828/2018/schedule.html)
 
-### Videos
-
-[https://www.bilibili.com/video/av15896196/]( https://www.bilibili.com/video/av15896196/)  
-[https://www.youtube.com/watch?v=kDRHsNauoxk&list=PLfciLKR3SgqNJKKIKUliWoNBBH1VHL3AP]( https://www.youtube.com/watch?v=kDRHsNauoxk&list=PLfciLKR3SgqNJKKIKUliWoNBBH1VHL3AP)  
-
 ### Repos
 
 [https://github.com/WLBF/xv6-public](https://github.com/WLBF/xv6-public)  
@@ -20,7 +15,6 @@
 
 * [C pointers](https://github.com/WLBF/mit-6.828/blob/master/c-pointers.md)  
 * [x86 calling conventions](https://github.com/WLBF/mit-6.828/blob/master/x86-calling-conventions/x86-calling-convention.md)  
-
 
 ### Homeworks
 
